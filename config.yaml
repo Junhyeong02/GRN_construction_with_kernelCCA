@@ -1,5 +1,5 @@
 parameters:
-        nThreads: 2
+        nThreads: 10
         reg_kernel: 0.2
         corr_thr: 0.5
         edge_thr: 0.5

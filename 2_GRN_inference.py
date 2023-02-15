@@ -1,32 +1,16 @@
-import re
 import pickle
-import time
 import pandas as pd
 import numpy as np
 import rcca
 from scipy.linalg import norm, eigh
-from scipy.stats import fisher_exact,ttest_ind
-from statsmodels.stats.multitest import multipletests
+from scipy.stats import fisher_exact
 from sklearn.preprocessing import MinMaxScaler
 from multiprocessing import Pool
 import operator
-import matplotlib.pyplot as plt
-import pandas_profiling
 import networkx as nx
 import itertools
-from collections import Counter
-import mygene
-from sklearn.cluster import AgglomerativeClustering
-from community import community_louvain
-import networkx.algorithms.community as nxcom
-from collections import defaultdict
-from scipy.spatial import distance
-import pandas_profiling
 import pickle
-from pathlib import Path
 import argparse
-
-
 
 def weighted_kcca(data, reg=0.5, numCC=None, kernelcca=True, ktype='linear', gausigma=1.0, degree=2):
     """Set up and solve the kernel CCA eigenproblem"""
